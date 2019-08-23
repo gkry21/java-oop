@@ -32,8 +32,8 @@ public class MemberBean { //도메인은 클라이언트
 	public void setBlood(String blood) {
 		this.blood = blood;
 	}
-	public String getBlood(String blood) {
-		return this.blood = blood;
+	public String getBlood() {
+		return this.blood;
 	}
 	public void setHeight(double height) {
 		this.height = height;
