@@ -1,11 +1,6 @@
 package com.bitcamp.services;
 import com.bitcamp.domains.ScheduleBean;
-public class ScheduleService {
-		private ScheduleBean[] schedules;
-		private int count;
+public interface ScheduleService {
 		
-		public ScheduleService() {
-			schedules = new ScheduleBean[0];
-			count++;
-		}
+	public String scheduleService();
 }

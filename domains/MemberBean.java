@@ -1,3 +1,5 @@
+//인캡슐레이션, 최소한의 게터세터 
+
 package com.bitcamp.domains;
 
 public class MemberBean { //도메인은 클라이언트

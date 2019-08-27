@@ -4,13 +4,13 @@ import javax.swing.JOptionPane;
 
 import com.bitcamp.domains.MemberBean;
 import com.bitcamp.services.MemberService; //서비스는 하나 아 멤버빈2개이상의 데이터를 가지니까 서버
-
+import com.bitcamp.serviceimpls.MemberServiceImpl;
 public class MemberController {
 //정보입력, 정보확인, bmi, 연봉계산기
 	public static void main(String[] args) {
 		MemberBean member = null; //초기화, 공간만 있어서 선언(실체가 없어도 됨) -> 추상
 	//	-> 멤버가 하나니까 스칼라구나
-		MemberService service = new MemberService(); // 선언 초기화 생성을 한꺼번에 함 --> 생성했다 (과정을 생략하고 한번에 처리한것을 생성했다고 한다.)
+		MemberService service = new MemberServiceImpl(); // 선언 초기화 생성을 한꺼번에 함 --> 생성했다 (과정을 생략하고 한번에 처리한것을 생성했다고 한다.)
 	// 클래스 				인스턴스											-> 
 		MemberBean[] members = new MemberBean[2];
 		String[] arr = null;
@@ -68,13 +68,7 @@ public class MemberController {
 			case "4":
 				JOptionPane.showMessageDialog(null, "종료");
 				break;
-			case "5" :
-				JOptionPane.showMessageDialog(null, service.list());
-				break;
-			case "6" :
-				String searchId = JOptionPane.showInputDialog("검색 ID");
-				member = service.findById(searchId);
-				JOptionPane.showMessageDialog(null, member);
+
 			case "7" :
 				String loginvalue = JOptionPane.showInputDialog("로그인 id,pw");
 				String[] loginvalues = loginvalue.split(",");
